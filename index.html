@@ -19,7 +19,7 @@
   /* ===== هيدر VIP + أنيميشن ===== */
   header {
     position: relative;
-    padding: 110px 20px 80px;
+    padding: 90px 20px;
     text-align: center;
     background: linear-gradient(135deg,#1f1b24,#000);
     border-bottom: 6px solid #ff9800;
@@ -43,23 +43,6 @@
     100% { transform: rotate(360deg);}
   }
 
-  /* ===== اللوجو ===== */
-  .logo {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 3;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-7px); }
-    100% { transform: translateY(0px); }
-  }
-
   header h1 {
     font-size: 48px;
     font-weight: 900;
@@ -76,6 +59,7 @@
     position: relative;
   }
 
+  /* ===== الأزرار الاحترافية ===== */
   .buttons {
     margin-top: 30px;
     display: flex;
@@ -115,7 +99,7 @@
     transform: translateY(-4px);
   }
 
-  /* ===== باقي الحاجات === */
+  /* ===== مميزات المنصة ===== */
   section {
     padding: 70px 20px;
     max-width: 1150px;
@@ -157,6 +141,13 @@
     font-weight: 800;
   }
 
+  .card p {
+    margin-top: 10px;
+    font-size: 17px;
+    opacity: 0.8;
+  }
+
+  /* ===== الفوتر ===== */
   footer {
     text-align: center;
     padding: 25px;
@@ -165,7 +156,7 @@
     color: #999;
   }
 
-  /* ===== popup ===== */
+  /* ===== popup مودرن ===== */
   #popup {
     position: fixed;
     top: 0; left: 0;
@@ -192,6 +183,27 @@
     100% { transform: scale(1); opacity: 1; }
   }
 
+  .popup-box h3 {
+    color: #ff9800;
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .popup-box p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.7;
+    margin-top: 15px;
+  }
+
+  .popup-box ul {
+    color: #fff;
+    line-height: 1.9;
+    margin-top: 15px;
+    padding-right: 18px;
+  }
+
   .close-btn {
     width: 100%;
     background: #ff9800;
@@ -203,15 +215,16 @@
     cursor: pointer;
     color: #000;
   }
+
+  .close-btn:hover {
+    background: #ffa726;
+  }
 </style>
 </head>
 
 <body>
 
 <header>
-  <!-- اللوجو -->
-  <img src="Al_Hashimy_Logo.png" class="logo" alt="Logo">
-
   <h1>منصة الهاشمي في اللغة العربية</h1>
   <p>المنصة الرسمية لشرح ومتابعة المنهج مع مستر محمد هاشم – تطوير المبرمج عبدالله خالد</p>
 
@@ -246,12 +259,13 @@
 <div id="popup">
   <div class="popup-box">
     <h3>تنبيه مهم قبل التحميل</h3>
-    <p>لو ظهر لك تحذير من جوجل Play، اطمن… ده طبيعي لأن التطبيق مش موجود على المتجر.</p>
+    <p>لو ظهر لك تحذير من جوجل Play، اطمن… ده طبيعي لأن التطبيق مش موجود على المتجر.  
+       كل التطبيقات الخارجية بتظهر نفس الرسالة.</p>
 
     <ul>
       <li>اضغط "متابعة التحميل".</li>
       <li>لو ظهر إشعار "هذا النوع من الملفات ضار": تجاهله.</li>
-      <li>اختر "تنزيل على أي حال".</li>
+      <li>ثم اختر "تنزيل على أي حال".</li>
       <li>بعد التحميل → افتح الملف.</li>
       <li>اضغط "تثبيت على أي حال".</li>
     </ul>
@@ -261,12 +275,12 @@
 </div>
 
 <script>
-function openPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
+  function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
 </script>
 
 </body>
